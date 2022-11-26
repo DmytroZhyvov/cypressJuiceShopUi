@@ -26,4 +26,16 @@ export default class BasePage{
     clickYourBasketButton(){
         this.getYourBasketButton().click();
     }
+
+    getSearchButton(){
+        return cy.get("[data-mat-icon-type='font']:contains(' search ')");
+    }
+
+    clickSearchButton(){
+        this.getSearchButton().click();
+    }
+
+    getSearchInput(){
+        return cy.get('.mat-form-field.mat-search_field');
+    }
 }

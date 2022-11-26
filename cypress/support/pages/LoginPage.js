@@ -1,6 +1,5 @@
 import BasePage from './BasePage';
 import WelcomePage from './WelcomePage';
-import user from '../../fixtures/user.json'
 
 class LoginPage extends BasePage{
     visit(){
@@ -53,6 +52,7 @@ class LoginPage extends BasePage{
 
     submitLoginForm(email, password){
         WelcomePage.clickDismissButton();
+        WelcomePage.clickCookieConfirmButton();
         this.enterValueInEmailInput(email);
         this.enterValueInPasswordInput(password);
         this.clickLoginButton();

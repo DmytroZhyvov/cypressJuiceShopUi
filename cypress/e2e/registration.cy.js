@@ -4,7 +4,7 @@ import LoginPage from '../support/pages/LoginPage';
 import RegistrationPage from '../support/pages/RegistrationPage';
 
 describe('User can', () => {
-  it('visit the site', () => {
+  it('be registered', () => {
     //Open Registration page from the main page - for learning purpose only!
 
     // cy.visit('/');
@@ -15,6 +15,8 @@ describe('User can', () => {
 
     const [email, password] = RegistrationPage.registerNewUser();
     LoginPage.login(email, password);
+    MainPage.clickAccountButton();
+    MainPage.getMenuPanel().should("contain.text", email);
 
   })
 })

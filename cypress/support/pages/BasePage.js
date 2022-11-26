@@ -14,4 +14,8 @@ export default class BasePage{
     clickLoginButton(){
         this.getLoginButton().click();
     }
+
+    getMenuPanel(){
+        return cy.get('#mat-menu-panel-0');
+    }
 }

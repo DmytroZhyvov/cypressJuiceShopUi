@@ -18,4 +18,12 @@ export default class BasePage{
     getMenuPanel(){
         return cy.get('#mat-menu-panel-0');
     }
+
+    getYourBasketButton(){
+        return cy.get('[aria-label="Show the shopping cart"]');
+    }
+
+    clickYourBasketButton(){
+        this.getYourBasketButton().click();
+    }
 }
